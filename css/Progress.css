@@ -1,0 +1,74 @@
+.progress-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .motion-label {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 40px; /* Space between the label and progress bars */
+   
+    transform-origin: left center; /* Adjusts the origin for rotation */
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+
+  .skills-wrapper {
+    flex: 1; /* Take up remaining space */
+  }
+  .skill {
+    margin: 20px 0;
+  }
+
+  .skill-name {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .progress-bar {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(to right, #303030, #c72370);
+    width: 0;
+    transition: width 2s ease;
+  }
+
+  /* Skill-specific widths */
+  .photoshop .progress-fill { width: 90%; } /* Example: Photoshop skill at 90% */
+  .html .progress-fill { width: 80%; }      /* Example: HTML skill at 80% */
+  .css .progress-fill { width: 75%; }       /* Example: CSS skill at 75% */
+  .sql .progress-fill { width: 70%; }       /* Example: SQL skill at 70% */
+  .java .progress-fill { width: 60%; }      /* Example: Java skill at 60% */
+  .python .progress-fill { width: 85%; }    /* Example: Python skill at 85% */
+  .figma .progress-fill { width: 45%; }    /* Example: VS Code skill at 95% */
+  .vscode .progress-fill { width: 85%; }    /* Example: VS Code skill at 95% */
+  
+
+  @media (max-width: 600px) {
+    .motion-label {
+      font-size: 20px; /* Further adjust font size for very small screens */
+    }
+  
+    .progress-bar {
+      height: 15px; /* Further adjust height for very small screens */
+    }
+    
+    .skill-name {
+      font-size: 14px; /* Adjust font size for very small screens */
+    }
+  }
